@@ -15,28 +15,30 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.simpleframework.xml.core.Persister;
 
-public class NFeInfNFeDetExportTest {
-    
-    public static final String XML = "<detExport><nDraw>0</nDraw></detExport>";
-    
+public class NFeInfNFeIdeNFrefTest {
+
+    public static final String XML = "<NFref><refNFe>0</refNFe><refCTe>1</refCTe></NFref>";
+
     @Test
     public void test1() {
-        NFeInfNFeDetProdDetExport obj = new NFeInfNFeDetProdDetExport();
-        obj.setnDraw("0");
+        NFeInfNFeIdeNFref obj = new NFeInfNFeIdeNFref();
+        obj.setRefNFe("0");
+        obj.setRefCTe("1");
 
         Assert.assertEquals(XML, obj.toString());
     }
-    
+
     @Test
-    public void test2() throws Exception{
+    public void test2() throws Exception {
         Persister persister = new Persister();
-        NFeInfNFeDetProdDetExport obj = persister.read(NFeInfNFeDetProdDetExport.class, XML);
-        
-        Assert.assertEquals("0", obj.getnDraw());
+        NFeInfNFeIdeNFref obj = persister.read(NFeInfNFeIdeNFref.class, XML);
+
+        Assert.assertEquals("0", obj.getRefNFe());
+        Assert.assertEquals("1", obj.getRefCTe());
     }
+
 }
