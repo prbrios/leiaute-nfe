@@ -15,8 +15,6 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.simpleframework.xml.core.Persister;

@@ -15,15 +15,11 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.github.prbrios.leiaute.nfe.Base;
 import org.junit.Assert;
 import org.junit.Test;
-import org.simpleframework.xml.Root;
 import org.simpleframework.xml.core.Persister;
 
-@JsonRootName("icmsst")
-@Root(name = "ICMSST")
 public class NFeInfNFeDetImpostoICMSICMSSTTest extends Base {
 
     public static final String XML = "<ICMSST><orig>0</orig><CST>1</CST><vBCSTRet>2</vBCSTRet><pST>3</pST><vICMSSubstituto>4</vICMSSubstituto><vICMSSTRet>5</vICMSSTRet><vBCFCPSTRet>6</vBCFCPSTRet><pFCPSTRet>7</pFCPSTRet><vFCPSTRet>8</vFCPSTRet><vBCSTDest>9</vBCSTDest><vICMSSTDest>10</vICMSSTDest><pRedBCEfet>11</pRedBCEfet><vBCEfet>12</vBCEfet><pICMSEfet>13</pICMSEfet><vICMSEfet>14</vICMSEfet></ICMSST>";

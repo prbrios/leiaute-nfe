@@ -13,25 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.prbrios.leiaute.nfe.classes;
+package com.github.prbrios.leiaute.nfe.classes.inutilizacao.retorno;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.simpleframework.xml.core.Persister;
 
-public class NFeInfNFeDetProdCombEncerranteTest {
+public class RetInutNFeTest {
 
-    public static final String XML = "<encerrante><nBico>0</nBico><nBomba>1</nBomba><nTanque>2</nTanque><vEncIni>3</vEncIni><vEncFin>4</vEncFin></encerrante>";
+    public static final String XML = "<retInutNFe versao=\"0\"/>";
 
     @Test
     public void test1() {
-
-        NFeInfNFeDetProdCombEncerrante obj = new NFeInfNFeDetProdCombEncerrante();
-        obj.setnBico("0");
-        obj.setnBomba("1");
-        obj.setnTanque("2");
-        obj.setvEncIni("3");
-        obj.setvEncFin("4");
+        RetInutNFe obj = new RetInutNFe();
+        obj.setVersao("0");
 
         Assert.assertEquals(XML, obj.toString());
     }
@@ -39,12 +34,8 @@ public class NFeInfNFeDetProdCombEncerranteTest {
     @Test
     public void test2() throws Exception {
         Persister persister = new Persister();
-        NFeInfNFeDetProdCombEncerrante obj = persister.read(NFeInfNFeDetProdCombEncerrante.class, XML);
+        RetInutNFe obj = persister.read(RetInutNFe.class, XML);
 
-        Assert.assertEquals("0", obj.getnBico());
-        Assert.assertEquals("1", obj.getnBomba());
-        Assert.assertEquals("2", obj.getnTanque());
-        Assert.assertEquals("3", obj.getvEncIni());
-        Assert.assertEquals("4", obj.getvEncFin());
+        Assert.assertEquals("0", obj.getVersao());
     }
 }
