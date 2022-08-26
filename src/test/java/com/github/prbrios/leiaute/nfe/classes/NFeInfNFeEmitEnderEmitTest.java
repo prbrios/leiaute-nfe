@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeEmitEnderEmitTest {
@@ -38,7 +39,7 @@ public class NFeInfNFeEmitEnderEmitTest {
         obj.setxPais("9");
         obj.setFone("10");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -46,17 +47,17 @@ public class NFeInfNFeEmitEnderEmitTest {
         Persister persister = new Persister();
         NFeInfNFeEmitEnderEmit obj = persister.read(NFeInfNFeEmitEnderEmit.class, XML);
 
-        Assert.assertEquals("0", obj.getxLgr());
-        Assert.assertEquals("1", obj.getNro());
-        Assert.assertEquals("2", obj.getxCpl());
-        Assert.assertEquals("3", obj.getxBairro());
-        Assert.assertEquals("4", obj.getcMun());
-        Assert.assertEquals("5", obj.getxMun());
-        Assert.assertEquals("6", obj.getUF());
-        Assert.assertEquals("7", obj.getCEP());
-        Assert.assertEquals("8", obj.getcPais());
-        Assert.assertEquals("9", obj.getxPais());
-        Assert.assertEquals("10", obj.getFone());
+        assertEquals("0", obj.getxLgr());
+        assertEquals("1", obj.getNro());
+        assertEquals("2", obj.getxCpl());
+        assertEquals("3", obj.getxBairro());
+        assertEquals("4", obj.getcMun());
+        assertEquals("5", obj.getxMun());
+        assertEquals("6", obj.getUF());
+        assertEquals("7", obj.getCEP());
+        assertEquals("8", obj.getcPais());
+        assertEquals("9", obj.getxPais());
+        assertEquals("10", obj.getFone());
     }
 
 }

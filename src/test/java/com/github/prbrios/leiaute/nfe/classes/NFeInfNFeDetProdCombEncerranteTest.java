@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdCombEncerranteTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeDetProdCombEncerranteTest {
         obj.setvEncIni("3");
         obj.setvEncFin("4");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -41,10 +42,10 @@ public class NFeInfNFeDetProdCombEncerranteTest {
         Persister persister = new Persister();
         NFeInfNFeDetProdCombEncerrante obj = persister.read(NFeInfNFeDetProdCombEncerrante.class, XML);
 
-        Assert.assertEquals("0", obj.getnBico());
-        Assert.assertEquals("1", obj.getnBomba());
-        Assert.assertEquals("2", obj.getnTanque());
-        Assert.assertEquals("3", obj.getvEncIni());
-        Assert.assertEquals("4", obj.getvEncFin());
+        assertEquals("0", obj.getnBico());
+        assertEquals("1", obj.getnBomba());
+        assertEquals("2", obj.getnTanque());
+        assertEquals("3", obj.getvEncIni());
+        assertEquals("4", obj.getvEncFin());
     }
 }

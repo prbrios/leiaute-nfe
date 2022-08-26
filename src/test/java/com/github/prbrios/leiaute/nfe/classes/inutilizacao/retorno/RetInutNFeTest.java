@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.inutilizacao.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetInutNFeTest {
@@ -28,7 +28,7 @@ public class RetInutNFeTest {
         RetInutNFe obj = new RetInutNFe();
         obj.setVersao("0");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -36,6 +36,6 @@ public class RetInutNFeTest {
         Persister persister = new Persister();
         RetInutNFe obj = persister.read(RetInutNFe.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
+        assertEquals("0", obj.getVersao());
     }
 }

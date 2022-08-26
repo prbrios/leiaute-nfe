@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeIdeNFrefRefNFPTest {
@@ -35,7 +36,7 @@ public class NFeInfNFeIdeNFrefRefNFPTest {
         obj.setSerie("6");
         obj.setnNF("7");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -43,14 +44,14 @@ public class NFeInfNFeIdeNFrefRefNFPTest {
         Persister persister = new Persister();
         NFeInfNFeIdeNFrefRefNFP obj = persister.read(NFeInfNFeIdeNFrefRefNFP.class, XML);
 
-        Assert.assertEquals("0", obj.getcUF());
-        Assert.assertEquals("1", obj.getAAMM());
-        Assert.assertEquals("2", obj.getCNPJ());
-        Assert.assertEquals("3", obj.getCPF());
-        Assert.assertEquals("4", obj.getIE());
-        Assert.assertEquals("5", obj.getMod());
-        Assert.assertEquals("6", obj.getSerie());
-        Assert.assertEquals("7", obj.getnNF());
+        assertEquals("0", obj.getcUF());
+        assertEquals("1", obj.getAAMM());
+        assertEquals("2", obj.getCNPJ());
+        assertEquals("3", obj.getCPF());
+        assertEquals("4", obj.getIE());
+        assertEquals("5", obj.getMod());
+        assertEquals("6", obj.getSerie());
+        assertEquals("7", obj.getnNF());
     }
 
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeInfRespTecTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeInfRespTecTest {
         obj.setIdCSRT("4");
         obj.setHashCSRT("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -41,12 +42,12 @@ public class NFeInfNFeInfRespTecTest {
         Persister persister = new Persister();
         NFeInfNFeInfRespTec obj = persister.read(NFeInfNFeInfRespTec.class, XML);
 
-        Assert.assertEquals("0", obj.getCNPJ());
-        Assert.assertEquals("1", obj.getxContato());
-        Assert.assertEquals("2", obj.getEmail());
-        Assert.assertEquals("3", obj.getFone());
-        Assert.assertEquals("4", obj.getIdCSRT());
-        Assert.assertEquals("5", obj.getHashCSRT());
+        assertEquals("0", obj.getCNPJ());
+        assertEquals("1", obj.getxContato());
+        assertEquals("2", obj.getEmail());
+        assertEquals("3", obj.getFone());
+        assertEquals("4", obj.getIdCSRT());
+        assertEquals("5", obj.getHashCSRT());
     }
 
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoIPIIPITribTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeDetImpostoIPIIPITribTest {
         obj.setvUnid("4");
         obj.setvIPI("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -41,12 +42,12 @@ public class NFeInfNFeDetImpostoIPIIPITribTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoIPIIPITrib obj = persister.read(NFeInfNFeDetImpostoIPIIPITrib.class, XML);
 
-        Assert.assertEquals("0", obj.getCST());
-        Assert.assertEquals("1", obj.getvBC());
-        Assert.assertEquals("2", obj.getpIPI());
-        Assert.assertEquals("3", obj.getqUnid());
-        Assert.assertEquals("4", obj.getvUnid());
-        Assert.assertEquals("5", obj.getvIPI());
+        assertEquals("0", obj.getCST());
+        assertEquals("1", obj.getvBC());
+        assertEquals("2", obj.getpIPI());
+        assertEquals("3", obj.getqUnid());
+        assertEquals("4", obj.getvUnid());
+        assertEquals("5", obj.getvIPI());
 
     }
 }

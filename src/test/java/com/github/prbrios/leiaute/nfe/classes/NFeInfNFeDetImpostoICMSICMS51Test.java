@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMS51Test {
@@ -44,7 +45,7 @@ public class NFeInfNFeDetImpostoICMSICMS51Test {
         obj.setvFCPDif("14");
         obj.setvFCPEfet("15");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -52,22 +53,22 @@ public class NFeInfNFeDetImpostoICMSICMS51Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMS51 obj = persister.read(NFeInfNFeDetImpostoICMSICMS51.class, XML);
         
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCST());
-        Assert.assertEquals("2", obj.getModBC());
-        Assert.assertEquals("3", obj.getpRedBC());
-        Assert.assertEquals("4", obj.getvBC());
-        Assert.assertEquals("5", obj.getpICMS());
-        Assert.assertEquals("6", obj.getvICMSOp());
-        Assert.assertEquals("7", obj.getpDif());
-        Assert.assertEquals("8", obj.getvICMSDif());
-        Assert.assertEquals("9", obj.getvICMS());
-        Assert.assertEquals("10", obj.getvBCFCP());
-        Assert.assertEquals("11", obj.getpFCP());
-        Assert.assertEquals("12", obj.getvFCP());
-        Assert.assertEquals("13", obj.getpFCPDif());
-        Assert.assertEquals("14", obj.getvFCPDif());
-        Assert.assertEquals("15", obj.getvFCPEfet());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCST());
+        assertEquals("2", obj.getModBC());
+        assertEquals("3", obj.getpRedBC());
+        assertEquals("4", obj.getvBC());
+        assertEquals("5", obj.getpICMS());
+        assertEquals("6", obj.getvICMSOp());
+        assertEquals("7", obj.getpDif());
+        assertEquals("8", obj.getvICMSDif());
+        assertEquals("9", obj.getvICMS());
+        assertEquals("10", obj.getvBCFCP());
+        assertEquals("11", obj.getpFCP());
+        assertEquals("12", obj.getvFCP());
+        assertEquals("13", obj.getpFCPDif());
+        assertEquals("14", obj.getvFCPDif());
+        assertEquals("15", obj.getvFCPEfet());
         
     }
 }

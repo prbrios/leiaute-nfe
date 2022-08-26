@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.inutilizacao.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetInutNFeInfInutTest {
@@ -41,7 +41,7 @@ public class RetInutNFeInfInutTest {
         obj.setDhRecbto("12");
         obj.setnProt("13");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -49,19 +49,19 @@ public class RetInutNFeInfInutTest {
         Persister persister = new Persister();
         RetInutNFeInfInut obj = persister.read(RetInutNFeInfInut.class, XML);
 
-        Assert.assertEquals("0", obj.getId());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getVerAplic());
-        Assert.assertEquals("3", obj.getcStat());
-        Assert.assertEquals("4", obj.getxMotivo());
-        Assert.assertEquals("5", obj.getcUF());
-        Assert.assertEquals("6", obj.getAno());
-        Assert.assertEquals("7", obj.getCNPJ());
-        Assert.assertEquals("8", obj.getMod());
-        Assert.assertEquals("9", obj.getSerie());
-        Assert.assertEquals("10", obj.getnNFIni());
-        Assert.assertEquals("11", obj.getnNFFin());
-        Assert.assertEquals("12", obj.getDhRecbto());
-        Assert.assertEquals("13", obj.getnProt());
+        assertEquals("0", obj.getId());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getVerAplic());
+        assertEquals("3", obj.getcStat());
+        assertEquals("4", obj.getxMotivo());
+        assertEquals("5", obj.getcUF());
+        assertEquals("6", obj.getAno());
+        assertEquals("7", obj.getCNPJ());
+        assertEquals("8", obj.getMod());
+        assertEquals("9", obj.getSerie());
+        assertEquals("10", obj.getnNFIni());
+        assertEquals("11", obj.getnNFFin());
+        assertEquals("12", obj.getDhRecbto());
+        assertEquals("13", obj.getnProt());
     }
 }

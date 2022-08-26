@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMS30Test {
@@ -41,7 +42,7 @@ public class NFeInfNFeDetImpostoICMSICMS30Test {
         obj.setvICMSDeson("11");
         obj.setMotDesICMS("12");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -50,18 +51,18 @@ public class NFeInfNFeDetImpostoICMSICMS30Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMS30 obj = persister.read(NFeInfNFeDetImpostoICMSICMS30.class, XML);
         
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCST());
-        Assert.assertEquals("2", obj.getModBCST());
-        Assert.assertEquals("3", obj.getpMVAST());
-        Assert.assertEquals("4", obj.getpRedBCST());
-        Assert.assertEquals("5", obj.getvBCST());
-        Assert.assertEquals("6", obj.getpICMSST());
-        Assert.assertEquals("7", obj.getvICMSST());
-        Assert.assertEquals("8", obj.getvBCFCPST());
-        Assert.assertEquals("9", obj.getpFCPST());
-        Assert.assertEquals("10", obj.getvFCPST());
-        Assert.assertEquals("11", obj.getvICMSDeson());
-        Assert.assertEquals("12", obj.getMotDesICMS());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCST());
+        assertEquals("2", obj.getModBCST());
+        assertEquals("3", obj.getpMVAST());
+        assertEquals("4", obj.getpRedBCST());
+        assertEquals("5", obj.getvBCST());
+        assertEquals("6", obj.getpICMSST());
+        assertEquals("7", obj.getvICMSST());
+        assertEquals("8", obj.getvBCFCPST());
+        assertEquals("9", obj.getpFCPST());
+        assertEquals("10", obj.getvFCPST());
+        assertEquals("11", obj.getvICMSDeson());
+        assertEquals("12", obj.getMotDesICMS());
     }
 }

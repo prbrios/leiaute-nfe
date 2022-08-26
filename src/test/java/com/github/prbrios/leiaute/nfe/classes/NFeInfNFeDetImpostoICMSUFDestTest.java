@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSUFDestTest {
@@ -36,7 +37,7 @@ public class NFeInfNFeDetImpostoICMSUFDestTest {
         obj.setvICMSUFDest("7");
         obj.setvICMSUFRemet("8");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -44,14 +45,14 @@ public class NFeInfNFeDetImpostoICMSUFDestTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSUFDest obj = persister.read(NFeInfNFeDetImpostoICMSUFDest.class, XML);
 
-        Assert.assertEquals("0", obj.getvBCUFDest());
-        Assert.assertEquals("1", obj.getvBCFCPUFDest());
-        Assert.assertEquals("2", obj.getpFCPUFDest());
-        Assert.assertEquals("3", obj.getpICMSUFDest());
-        Assert.assertEquals("4", obj.getpICMSInter());
-        Assert.assertEquals("5", obj.getpICMSInterPart());
-        Assert.assertEquals("6", obj.getvFCPUFDest());
-        Assert.assertEquals("7", obj.getvICMSUFDest());
-        Assert.assertEquals("8", obj.getvICMSUFRemet());
+        assertEquals("0", obj.getvBCUFDest());
+        assertEquals("1", obj.getvBCFCPUFDest());
+        assertEquals("2", obj.getpFCPUFDest());
+        assertEquals("3", obj.getpICMSUFDest());
+        assertEquals("4", obj.getpICMSInter());
+        assertEquals("5", obj.getpICMSInterPart());
+        assertEquals("6", obj.getvFCPUFDest());
+        assertEquals("7", obj.getvICMSUFDest());
+        assertEquals("8", obj.getvICMSUFRemet());
     }
 }

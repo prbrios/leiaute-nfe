@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDestTest {
@@ -36,7 +37,7 @@ public class NFeInfNFeDestTest {
         obj.setIM("7");
         obj.setEmail("8");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -44,14 +45,14 @@ public class NFeInfNFeDestTest {
         Persister persister = new Persister();
         NFeInfNFeDest obj = persister.read(NFeInfNFeDest.class, XML);
 
-        Assert.assertEquals("0", obj.getCNPJ());
-        Assert.assertEquals("1", obj.getCPF());
-        Assert.assertEquals("2", obj.getIdEstrangeiro());
-        Assert.assertEquals("3", obj.getxNome());
-        Assert.assertEquals("4", obj.getIndIEDest());
-        Assert.assertEquals("5", obj.getIE());
-        Assert.assertEquals("6", obj.getISUF());
-        Assert.assertEquals("7", obj.getIM());
-        Assert.assertEquals("8", obj.getEmail());
+        assertEquals("0", obj.getCNPJ());
+        assertEquals("1", obj.getCPF());
+        assertEquals("2", obj.getIdEstrangeiro());
+        assertEquals("3", obj.getxNome());
+        assertEquals("4", obj.getIndIEDest());
+        assertEquals("5", obj.getIE());
+        assertEquals("6", obj.getISUF());
+        assertEquals("7", obj.getIM());
+        assertEquals("8", obj.getEmail());
     }
 }

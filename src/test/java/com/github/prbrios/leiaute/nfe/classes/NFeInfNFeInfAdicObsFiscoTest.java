@@ -17,8 +17,9 @@ package com.github.prbrios.leiaute.nfe.classes;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.core.Persister;
 
@@ -42,7 +43,7 @@ public class NFeInfNFeInfAdicObsFiscoTest {
         obj.setxTexto("0");
         obj.setxCampo("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -50,8 +51,8 @@ public class NFeInfNFeInfAdicObsFiscoTest {
         Persister persister = new Persister();
         NFeInfNFeInfAdicObsFisco obj = persister.read(NFeInfNFeInfAdicObsFisco.class, XML);
         
-        Assert.assertEquals("0", obj.getxTexto());
-        Assert.assertEquals("1", obj.getxCampo());
+        assertEquals("0", obj.getxTexto());
+        assertEquals("1", obj.getxCampo());
     }
 
 }

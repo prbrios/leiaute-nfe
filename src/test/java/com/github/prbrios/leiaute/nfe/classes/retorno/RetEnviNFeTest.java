@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetEnviNFeTest {
@@ -34,7 +34,7 @@ public class RetEnviNFeTest {
         obj.setcUF("5");
         obj.setDhRecbto("6");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -42,12 +42,12 @@ public class RetEnviNFeTest {
         Persister persister = new Persister();
         RetEnviNFe obj = persister.read(RetEnviNFe.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getVerAplic());
-        Assert.assertEquals("3", obj.getcStat());
-        Assert.assertEquals("4", obj.getxMotivo());
-        Assert.assertEquals("5", obj.getcUF());
-        Assert.assertEquals("6", obj.getDhRecbto());
+        assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getVerAplic());
+        assertEquals("3", obj.getcStat());
+        assertEquals("4", obj.getxMotivo());
+        assertEquals("5", obj.getcUF());
+        assertEquals("6", obj.getDhRecbto());
     }
 }

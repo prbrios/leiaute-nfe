@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetEnviNFeInfRecTest {
@@ -29,7 +29,7 @@ public class RetEnviNFeInfRecTest {
         obj.setnRec("0");
         obj.settMed("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -37,8 +37,8 @@ public class RetEnviNFeInfRecTest {
         Persister persister = new Persister();
         RetEnviNFeInfRec obj = persister.read(RetEnviNFeInfRec.class, XML);
 
-        Assert.assertEquals("0", obj.getnRec());
-        Assert.assertEquals("1", obj.gettMed());
+        assertEquals("0", obj.getnRec());
+        assertEquals("1", obj.gettMed());
     }
 
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTotalRetTribTest {
@@ -34,7 +35,7 @@ public class NFeInfNFeTotalRetTribTest {
         obj.setvBCRetPrev("5");
         obj.setvRetPrev("6");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -42,13 +43,13 @@ public class NFeInfNFeTotalRetTribTest {
         Persister persister = new Persister();
         NFeInfNFeTotalRetTrib obj = persister.read(NFeInfNFeTotalRetTrib.class, XML);
 
-        Assert.assertEquals("0", obj.getvRetPIS());
-        Assert.assertEquals("1", obj.getvRetCOFINS());
-        Assert.assertEquals("2", obj.getvRetCSLL());
-        Assert.assertEquals("3", obj.getvBCIRRF());
-        Assert.assertEquals("4", obj.getvIRRF());
-        Assert.assertEquals("5", obj.getvBCRetPrev());
-        Assert.assertEquals("6", obj.getvRetPrev());
+        assertEquals("0", obj.getvRetPIS());
+        assertEquals("1", obj.getvRetCOFINS());
+        assertEquals("2", obj.getvRetCSLL());
+        assertEquals("3", obj.getvBCIRRF());
+        assertEquals("4", obj.getvIRRF());
+        assertEquals("5", obj.getvBCRetPrev());
+        assertEquals("6", obj.getvRetPrev());
     }
 
 }

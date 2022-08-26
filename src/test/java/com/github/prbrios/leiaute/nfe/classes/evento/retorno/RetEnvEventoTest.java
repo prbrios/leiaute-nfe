@@ -1,7 +1,7 @@
 package com.github.prbrios.leiaute.nfe.classes.evento.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetEnvEventoTest {
@@ -19,7 +19,7 @@ public class RetEnvEventoTest {
         obj.setcStat("5");
         obj.setxMotivo("6");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -27,12 +27,12 @@ public class RetEnvEventoTest {
         Persister persister = new Persister();
         RetEnvEvento obj = persister.read(RetEnvEvento.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getIdLote());
-        Assert.assertEquals("2", obj.getTpAmb());
-        Assert.assertEquals("3", obj.getVerAplic());
-        Assert.assertEquals("4", obj.getcOrgao());
-        Assert.assertEquals("5", obj.getcStat());
-        Assert.assertEquals("6", obj.getxMotivo());
+        assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getIdLote());
+        assertEquals("2", obj.getTpAmb());
+        assertEquals("3", obj.getVerAplic());
+        assertEquals("4", obj.getcOrgao());
+        assertEquals("5", obj.getcStat());
+        assertEquals("6", obj.getxMotivo());
     }
 }

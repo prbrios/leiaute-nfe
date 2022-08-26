@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoPISTest {
@@ -27,7 +28,7 @@ public class NFeInfNFeDetImpostoPISTest {
     @Test
     public void test1() {
         NFeInfNFeDetImpostoPIS obj = new NFeInfNFeDetImpostoPIS();
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test

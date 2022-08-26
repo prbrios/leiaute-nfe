@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.status.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class ConsStatServTest {
@@ -31,7 +32,7 @@ public class ConsStatServTest {
         obj.setcUF("2");
         obj.setxServ("3");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -39,10 +40,10 @@ public class ConsStatServTest {
         Persister persister = new Persister();
         ConsStatServ obj = persister.read(ConsStatServ.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getcUF());
-        Assert.assertEquals("3", obj.getxServ());
+        assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getcUF());
+        assertEquals("3", obj.getxServ());
     }
 
 }

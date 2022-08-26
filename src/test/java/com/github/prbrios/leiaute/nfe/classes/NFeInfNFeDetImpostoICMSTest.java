@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSTest {
@@ -27,7 +28,7 @@ public class NFeInfNFeDetImpostoICMSTest {
     @Test
     public void test1() {
         NFeInfNFeDetImpostoICMS obj = new NFeInfNFeDetImpostoICMS();
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test

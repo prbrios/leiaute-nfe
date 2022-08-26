@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoCOFINSSTTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeDetImpostoCOFINSSTTest {
         obj.setvCOFINS("4");
         obj.setIndSomaCOFINSST("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -42,12 +43,12 @@ public class NFeInfNFeDetImpostoCOFINSSTTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoCOFINSST obj = persister.read(NFeInfNFeDetImpostoCOFINSST.class, XML);
 
-        Assert.assertEquals("0", obj.getvBC());
-        Assert.assertEquals("1", obj.getpCOFINS());
-        Assert.assertEquals("2", obj.getqBCProd());
-        Assert.assertEquals("3", obj.getvAliqProd());
-        Assert.assertEquals("4", obj.getvCOFINS());
-        Assert.assertEquals("5", obj.getIndSomaCOFINSST());
+        assertEquals("0", obj.getvBC());
+        assertEquals("1", obj.getpCOFINS());
+        assertEquals("2", obj.getqBCProd());
+        assertEquals("3", obj.getvAliqProd());
+        assertEquals("4", obj.getvCOFINS());
+        assertEquals("5", obj.getIndSomaCOFINSST());
 
     }
 

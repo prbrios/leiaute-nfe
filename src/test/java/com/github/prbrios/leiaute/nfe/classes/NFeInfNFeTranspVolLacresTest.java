@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTranspVolLacresTest {
@@ -27,7 +28,7 @@ public class NFeInfNFeTranspVolLacresTest {
     public void test1() {
         NFeInfNFeTranspVolLacres obj = new NFeInfNFeTranspVolLacres();
         obj.setnLacre("0");
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -35,7 +36,7 @@ public class NFeInfNFeTranspVolLacresTest {
         Persister persister = new Persister();
         NFeInfNFeTranspVolLacres obj = persister.read(NFeInfNFeTranspVolLacres.class, XML);
 
-        Assert.assertEquals("0", obj.getnLacre());
+        assertEquals("0", obj.getnLacre());
     }
 
 }

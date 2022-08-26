@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.inutilizacao.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class InutNFeInfInutTest {
@@ -38,7 +38,7 @@ public class InutNFeInfInutTest {
         obj.setnNFFin("9");
         obj.setxJust("10");
 
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -46,17 +46,17 @@ public class InutNFeInfInutTest {
 		Persister persister = new Persister();
 		InutNFeInfInut obj = persister.read(InutNFeInfInut.class, XML);
 
-        Assert.assertEquals("0", obj.getId());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getxServ());
-        Assert.assertEquals("3", obj.getcUF());
-        Assert.assertEquals("4", obj.getAno());
-        Assert.assertEquals("5", obj.getCNPJ());
-        Assert.assertEquals("6", obj.getMod());
-        Assert.assertEquals("7", obj.getSerie());
-        Assert.assertEquals("8", obj.getnNFIni());
-        Assert.assertEquals("9", obj.getnNFFin());
-        Assert.assertEquals("10", obj.getxJust());
+        assertEquals("0", obj.getId());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getxServ());
+        assertEquals("3", obj.getcUF());
+        assertEquals("4", obj.getAno());
+        assertEquals("5", obj.getCNPJ());
+        assertEquals("6", obj.getMod());
+        assertEquals("7", obj.getSerie());
+        assertEquals("8", obj.getnNFIni());
+        assertEquals("9", obj.getnNFFin());
+        assertEquals("10", obj.getxJust());
 	}
 
 }

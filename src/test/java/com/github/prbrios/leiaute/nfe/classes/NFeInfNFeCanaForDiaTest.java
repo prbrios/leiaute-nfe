@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 import java.util.ArrayList;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeCanaForDiaTest {
@@ -30,7 +31,7 @@ public class NFeInfNFeCanaForDiaTest {
         obj.setQtde("0");
         obj.setDia("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -38,7 +39,7 @@ public class NFeInfNFeCanaForDiaTest {
         Persister persister = new Persister();
         NFeInfNFeCanaForDia obj = persister.read(NFeInfNFeCanaForDia.class, XML);
 
-        Assert.assertEquals("0", obj.getQtde());
-        Assert.assertEquals("1", obj.getDia());
+        assertEquals("0", obj.getQtde());
+        assertEquals("1", obj.getDia());
     }
 }

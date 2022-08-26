@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTranspRetTranspTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeTranspRetTranspTest {
         obj.setCFOP("4");
         obj.setcMunFG("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -41,12 +42,12 @@ public class NFeInfNFeTranspRetTranspTest {
         Persister persister = new Persister();
         NFeInfNFeTranspRetTransp obj = persister.read(NFeInfNFeTranspRetTransp.class, XML);
 
-        Assert.assertEquals("0", obj.getvServ());
-        Assert.assertEquals("1", obj.getvBCRet());
-        Assert.assertEquals("2", obj.getpICMSRet());
-        Assert.assertEquals("3", obj.getvICMSRet());
-        Assert.assertEquals("4", obj.getCFOP());
-        Assert.assertEquals("5", obj.getcMunFG());
+        assertEquals("0", obj.getvServ());
+        assertEquals("1", obj.getvBCRet());
+        assertEquals("2", obj.getpICMSRet());
+        assertEquals("3", obj.getvICMSRet());
+        assertEquals("4", obj.getCFOP());
+        assertEquals("5", obj.getcMunFG());
     }
 
 }

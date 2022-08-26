@@ -17,8 +17,9 @@ package com.github.prbrios.leiaute.nfe.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdCombCIDETest {
@@ -33,7 +34,7 @@ public class NFeInfNFeDetProdCombCIDETest {
         obj.setvAliqProd("1");
         obj.setvCIDE("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -41,9 +42,9 @@ public class NFeInfNFeDetProdCombCIDETest {
         Persister persister = new Persister();
         NFeInfNFeDetProdCombCIDE obj = persister.read(NFeInfNFeDetProdCombCIDE.class, XML);
 
-        Assert.assertEquals("0", obj.getqBCProd());
-        Assert.assertEquals("1", obj.getvAliqProd());
-        Assert.assertEquals("2", obj.getvCIDE());
+        assertEquals("0", obj.getqBCProd());
+        assertEquals("1", obj.getvAliqProd());
+        assertEquals("2", obj.getvCIDE());
 
     }
 }

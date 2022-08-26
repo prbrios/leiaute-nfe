@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeInfAdicTest {
@@ -29,7 +30,7 @@ public class NFeInfNFeInfAdicTest {
         obj.setInfAdFisco("0");
         obj.setInfCpl("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -37,8 +38,8 @@ public class NFeInfNFeInfAdicTest {
         Persister persister = new Persister();
         NFeInfNFeInfAdic obj = persister.read(NFeInfNFeInfAdic.class, XML);
 
-        Assert.assertEquals("0", obj.getInfAdFisco());
-        Assert.assertEquals("1", obj.getInfCpl());
+        assertEquals("0", obj.getInfAdFisco());
+        assertEquals("1", obj.getInfCpl());
     }
 
 }

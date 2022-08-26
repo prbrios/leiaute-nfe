@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.evento.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class EnvEventoEventoInfEventoDetEventoTest {
@@ -37,7 +37,7 @@ public class EnvEventoEventoInfEventoDetEventoTest {
         obj.setxCorrecao("8");
         obj.setxCondUso("9");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -45,16 +45,16 @@ public class EnvEventoEventoInfEventoDetEventoTest {
         Persister persister = new Persister();
         EnvEventoEventoInfEventoDetEvento obj = persister.read(EnvEventoEventoInfEventoDetEvento.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getDescEvento());
-        Assert.assertEquals("2", obj.getcOrgaoAutor());
-        Assert.assertEquals("3", obj.getTpAutor());
-        Assert.assertEquals("4", obj.getVerAplic());
-        Assert.assertEquals("5", obj.getTpAutorizacao());
-        Assert.assertEquals("6", obj.getnProt());
-        Assert.assertEquals("7", obj.getxJust());
-        Assert.assertEquals("8", obj.getxCorrecao());
-        Assert.assertEquals("9", obj.getxCondUso());
+        assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getDescEvento());
+        assertEquals("2", obj.getcOrgaoAutor());
+        assertEquals("3", obj.getTpAutor());
+        assertEquals("4", obj.getVerAplic());
+        assertEquals("5", obj.getTpAutorizacao());
+        assertEquals("6", obj.getnProt());
+        assertEquals("7", obj.getxJust());
+        assertEquals("8", obj.getxCorrecao());
+        assertEquals("9", obj.getxCondUso());
     }
 
 }

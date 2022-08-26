@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdVeicProdTest {
@@ -51,7 +52,7 @@ public class NFeInfNFeDetProdVeicProdTest {
         obj.setLota("22");
         obj.setTpRest("23");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -59,30 +60,30 @@ public class NFeInfNFeDetProdVeicProdTest {
         Persister persister = new Persister();
         NFeInfNFeDetProdVeicProd obj = persister.read(NFeInfNFeDetProdVeicProd.class, XML);
 
-        Assert.assertEquals("0", obj.getTpOp());
-        Assert.assertEquals("1", obj.getChassi());
-        Assert.assertEquals("2", obj.getcCor());
-        Assert.assertEquals("3", obj.getxCor());
-        Assert.assertEquals("4", obj.getPot());
-        Assert.assertEquals("5", obj.getCilin());
-        Assert.assertEquals("6", obj.getPesoL());
-        Assert.assertEquals("7", obj.getPesoB());
-        Assert.assertEquals("8", obj.getnSerie());
-        Assert.assertEquals("9", obj.getTpComb());
-        Assert.assertEquals("10", obj.getnMotor());
-        Assert.assertEquals("11", obj.getCMT());
-        Assert.assertEquals("12", obj.getDist());
-        Assert.assertEquals("13", obj.getAnoMod());
-        Assert.assertEquals("14", obj.getAnoFab());
-        Assert.assertEquals("15", obj.getTpPint());
-        Assert.assertEquals("16", obj.getTpVeic());
-        Assert.assertEquals("17", obj.getEspVeic());
-        Assert.assertEquals("18", obj.getVIN());
-        Assert.assertEquals("19", obj.getCondVeic());
-        Assert.assertEquals("20", obj.getcMod());
-        Assert.assertEquals("21", obj.getcCorDENATRAN());
-        Assert.assertEquals("22", obj.getLota());
-        Assert.assertEquals("23", obj.getTpRest());
+        assertEquals("0", obj.getTpOp());
+        assertEquals("1", obj.getChassi());
+        assertEquals("2", obj.getcCor());
+        assertEquals("3", obj.getxCor());
+        assertEquals("4", obj.getPot());
+        assertEquals("5", obj.getCilin());
+        assertEquals("6", obj.getPesoL());
+        assertEquals("7", obj.getPesoB());
+        assertEquals("8", obj.getnSerie());
+        assertEquals("9", obj.getTpComb());
+        assertEquals("10", obj.getnMotor());
+        assertEquals("11", obj.getCMT());
+        assertEquals("12", obj.getDist());
+        assertEquals("13", obj.getAnoMod());
+        assertEquals("14", obj.getAnoFab());
+        assertEquals("15", obj.getTpPint());
+        assertEquals("16", obj.getTpVeic());
+        assertEquals("17", obj.getEspVeic());
+        assertEquals("18", obj.getVIN());
+        assertEquals("19", obj.getCondVeic());
+        assertEquals("20", obj.getcMod());
+        assertEquals("21", obj.getcCorDENATRAN());
+        assertEquals("22", obj.getLota());
+        assertEquals("23", obj.getTpRest());
     }
 
 }

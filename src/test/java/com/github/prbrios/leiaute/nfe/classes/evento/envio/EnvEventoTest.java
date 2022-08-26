@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.evento.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class EnvEventoTest {
@@ -29,7 +29,7 @@ public class EnvEventoTest {
         obj.setVersao("0");
         obj.setIdLote("1");
         
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -37,8 +37,8 @@ public class EnvEventoTest {
 		Persister persister = new Persister();
 		EnvEvento obj = persister.read(EnvEvento.class, XML);
 
-		Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getIdLote());
+		assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getIdLote());
 	}
 
 }

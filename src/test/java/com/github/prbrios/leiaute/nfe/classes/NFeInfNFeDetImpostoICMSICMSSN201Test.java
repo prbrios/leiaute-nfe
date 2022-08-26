@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMSSN201Test {
@@ -40,7 +41,7 @@ public class NFeInfNFeDetImpostoICMSICMSSN201Test {
         obj.setpCredSN("11");
         obj.setvCredICMSSN("12");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -48,19 +49,19 @@ public class NFeInfNFeDetImpostoICMSICMSSN201Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMSSN201 obj = persister.read(NFeInfNFeDetImpostoICMSICMSSN201.class, XML);
 
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCSOSN());
-        Assert.assertEquals("2", obj.getModBCST());
-        Assert.assertEquals("3", obj.getpMVAST());
-        Assert.assertEquals("4", obj.getpRedBCST());
-        Assert.assertEquals("5", obj.getvBCST());
-        Assert.assertEquals("6", obj.getpICMSST());
-        Assert.assertEquals("7", obj.getvICMSST());
-        Assert.assertEquals("8", obj.getvBCFCPST());
-        Assert.assertEquals("9", obj.getpFCPST());
-        Assert.assertEquals("10", obj.getvFCPST());
-        Assert.assertEquals("11", obj.getpCredSN());
-        Assert.assertEquals("12", obj.getvCredICMSSN());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCSOSN());
+        assertEquals("2", obj.getModBCST());
+        assertEquals("3", obj.getpMVAST());
+        assertEquals("4", obj.getpRedBCST());
+        assertEquals("5", obj.getvBCST());
+        assertEquals("6", obj.getpICMSST());
+        assertEquals("7", obj.getvICMSST());
+        assertEquals("8", obj.getvBCFCPST());
+        assertEquals("9", obj.getpFCPST());
+        assertEquals("10", obj.getvFCPST());
+        assertEquals("11", obj.getpCredSN());
+        assertEquals("12", obj.getvCredICMSSN());
 
     }
 }

@@ -6,7 +6,7 @@
 
     <groupId>com.github.prbrios</groupId>
     <artifactId>leiaute-nfe</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>leiaute-nfe</name>
     <url>https://github.com/prbrios/leiaute-nfe</url>
@@ -22,6 +22,7 @@
     <developers>
         <developer>
             <name>Paulo Rios</name>
+            <email>prbrios@gmail.com</email>
         </developer>
     </developers>
     
@@ -50,9 +51,15 @@
     
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.7.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.19.0</version>
             <scope>test</scope>
         </dependency>
         
@@ -63,10 +70,10 @@
         </dependency>
         
         <dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.10.3</version>
-		</dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.3</version>
+        </dependency>
     </dependencies>
 
     <profiles>

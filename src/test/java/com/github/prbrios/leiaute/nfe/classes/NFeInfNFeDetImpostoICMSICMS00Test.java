@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMS00Test {
@@ -36,7 +37,7 @@ public class NFeInfNFeDetImpostoICMSICMS00Test {
         obj.setvFCP("5.00");
         obj.setvICMS("18.00");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -45,13 +46,13 @@ public class NFeInfNFeDetImpostoICMSICMS00Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMS00 obj = persister.read(NFeInfNFeDetImpostoICMSICMS00.class, XML);
         
-        Assert.assertEquals("00", obj.getCST());
-        Assert.assertEquals("3", obj.getModBC());
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("5.00", obj.getpFCP());
-        Assert.assertEquals("18.00", obj.getpICMS());
-        Assert.assertEquals("100.00", obj.getvBC());
-        Assert.assertEquals("5.00", obj.getvFCP());
-        Assert.assertEquals("18.00", obj.getvICMS());
+        assertEquals("00", obj.getCST());
+        assertEquals("3", obj.getModBC());
+        assertEquals("0", obj.getOrig());
+        assertEquals("5.00", obj.getpFCP());
+        assertEquals("18.00", obj.getpICMS());
+        assertEquals("100.00", obj.getvBC());
+        assertEquals("5.00", obj.getvFCP());
+        assertEquals("18.00", obj.getvICMS());
     }
 }

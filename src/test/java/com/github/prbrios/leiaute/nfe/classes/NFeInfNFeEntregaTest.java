@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeEntregaTest {
@@ -43,7 +44,7 @@ public class NFeInfNFeEntregaTest {
         obj.setEmail("14");
         obj.setIE("15");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -51,22 +52,22 @@ public class NFeInfNFeEntregaTest {
         Persister persister = new Persister();
         NFeInfNFeEntrega obj = persister.read(NFeInfNFeEntrega.class, XML);
 
-        Assert.assertEquals("0", obj.getCNPJ());
-        Assert.assertEquals("1", obj.getCPF());
-        Assert.assertEquals("2", obj.getxNome());
-        Assert.assertEquals("3", obj.getxLgr());
-        Assert.assertEquals("4", obj.getNro());
-        Assert.assertEquals("5", obj.getxCpl());
-        Assert.assertEquals("6", obj.getxBairro());
-        Assert.assertEquals("7", obj.getcMun());
-        Assert.assertEquals("8", obj.getxMun());
-        Assert.assertEquals("9", obj.getUF());
-        Assert.assertEquals("10", obj.getCEP());
-        Assert.assertEquals("11", obj.getcPais());
-        Assert.assertEquals("12", obj.getxPais());
-        Assert.assertEquals("13", obj.getFone());
-        Assert.assertEquals("14", obj.getEmail());
-        Assert.assertEquals("15", obj.getIE());
+        assertEquals("0", obj.getCNPJ());
+        assertEquals("1", obj.getCPF());
+        assertEquals("2", obj.getxNome());
+        assertEquals("3", obj.getxLgr());
+        assertEquals("4", obj.getNro());
+        assertEquals("5", obj.getxCpl());
+        assertEquals("6", obj.getxBairro());
+        assertEquals("7", obj.getcMun());
+        assertEquals("8", obj.getxMun());
+        assertEquals("9", obj.getUF());
+        assertEquals("10", obj.getCEP());
+        assertEquals("11", obj.getcPais());
+        assertEquals("12", obj.getxPais());
+        assertEquals("13", obj.getFone());
+        assertEquals("14", obj.getEmail());
+        assertEquals("15", obj.getIE());
     }
 
 }

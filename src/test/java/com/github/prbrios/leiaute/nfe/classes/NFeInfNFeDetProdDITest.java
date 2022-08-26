@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdDITest {
@@ -38,7 +39,7 @@ public class NFeInfNFeDetProdDITest {
         obj.setUFTerceiro("9");
         obj.setcExportador("10");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -47,17 +48,17 @@ public class NFeInfNFeDetProdDITest {
         Persister persister = new Persister();
         NFeInfNFeDetProdDI obj = persister.read(NFeInfNFeDetProdDI.class, XML);
 
-        Assert.assertEquals("0", obj.getnDI());
-        Assert.assertEquals("1", obj.getdDI());
-        Assert.assertEquals("2", obj.getxLocDesemb());
-        Assert.assertEquals("3", obj.getUFDesemb());
-        Assert.assertEquals("4", obj.getdDesemb());
-        Assert.assertEquals("5", obj.getTpViaTransp());
-        Assert.assertEquals("6", obj.getvAFRMM());
-        Assert.assertEquals("7", obj.getTpIntermedio());
-        Assert.assertEquals("8", obj.getCNPJ());
-        Assert.assertEquals("9", obj.getUFTerceiro());
-        Assert.assertEquals("10", obj.getcExportador());
+        assertEquals("0", obj.getnDI());
+        assertEquals("1", obj.getdDI());
+        assertEquals("2", obj.getxLocDesemb());
+        assertEquals("3", obj.getUFDesemb());
+        assertEquals("4", obj.getdDesemb());
+        assertEquals("5", obj.getTpViaTransp());
+        assertEquals("6", obj.getvAFRMM());
+        assertEquals("7", obj.getTpIntermedio());
+        assertEquals("8", obj.getCNPJ());
+        assertEquals("9", obj.getUFTerceiro());
+        assertEquals("10", obj.getcExportador());
 
     }
 

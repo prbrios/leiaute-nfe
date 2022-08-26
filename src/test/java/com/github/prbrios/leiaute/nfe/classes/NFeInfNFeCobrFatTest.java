@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeCobrFatTest {
@@ -31,19 +32,19 @@ public class NFeInfNFeCobrFatTest {
         obj.setvDesc("2");
         obj.setvLiq("3");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
     public void test2() throws Exception {
         Persister persister = new Persister();
         NFeInfNFeCobrFat obj = persister.read(NFeInfNFeCobrFat.class, XML);
-        Assert.assertEquals("0", obj.getnFat());
-        Assert.assertEquals("1", obj.getvOrig());
-        Assert.assertEquals("2", obj.getvDesc());
-        Assert.assertEquals("3", obj.getvLiq());
+        assertEquals("0", obj.getnFat());
+        assertEquals("1", obj.getvOrig());
+        assertEquals("2", obj.getvDesc());
+        assertEquals("3", obj.getvLiq());
 
-        Assert.assertTrue(true);
+        assertTrue(true);
 
     }
 }

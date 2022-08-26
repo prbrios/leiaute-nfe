@@ -2,8 +2,8 @@ package com.github.prbrios.leiaute.nfe.classes.evento.retorno;
 
 import org.simpleframework.xml.Root;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 @Root(name = "retEvento")
@@ -16,7 +16,7 @@ public class RetEnvEventoRetEventoTest {
 		RetEnvEventoRetEvento obj = new RetEnvEventoRetEvento();
         obj.setVersao("0");
         
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -24,7 +24,7 @@ public class RetEnvEventoRetEventoTest {
 		Persister persister = new Persister();
 		RetEnvEventoRetEvento obj = persister.read(RetEnvEventoRetEvento.class, XML);
 
-		Assert.assertEquals("0", obj.getVersao());
+		assertEquals("0", obj.getVersao());
 	}
 
 }

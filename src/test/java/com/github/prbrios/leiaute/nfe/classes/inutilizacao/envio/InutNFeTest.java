@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.inutilizacao.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class InutNFeTest {
@@ -28,7 +28,7 @@ public class InutNFeTest {
 		InutNFe obj = new InutNFe();
         obj.setVersao("0");
         
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -36,6 +36,6 @@ public class InutNFeTest {
 		Persister persister = new Persister();
 		InutNFe obj = persister.read(InutNFe.class, XML);
 
-		Assert.assertEquals("0", obj.getVersao());
+		assertEquals("0", obj.getVersao());
 	}
 }

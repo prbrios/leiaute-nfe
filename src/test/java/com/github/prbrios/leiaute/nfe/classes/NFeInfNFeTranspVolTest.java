@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTranspVolTest {
@@ -33,7 +34,7 @@ public class NFeInfNFeTranspVolTest {
         obj.setPesoL("4");
         obj.setPesoB("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -41,12 +42,12 @@ public class NFeInfNFeTranspVolTest {
         Persister persister = new Persister();
         NFeInfNFeTranspVol obj = persister.read(NFeInfNFeTranspVol.class, XML);
         
-        Assert.assertEquals("0", obj.getqVol());
-        Assert.assertEquals("1", obj.getEsp());
-        Assert.assertEquals("2", obj.getMarca());
-        Assert.assertEquals("3", obj.getnVol());
-        Assert.assertEquals("4", obj.getPesoL());
-        Assert.assertEquals("5", obj.getPesoB());
+        assertEquals("0", obj.getqVol());
+        assertEquals("1", obj.getEsp());
+        assertEquals("2", obj.getMarca());
+        assertEquals("3", obj.getnVol());
+        assertEquals("4", obj.getPesoL());
+        assertEquals("5", obj.getPesoB());
     }
 
 }

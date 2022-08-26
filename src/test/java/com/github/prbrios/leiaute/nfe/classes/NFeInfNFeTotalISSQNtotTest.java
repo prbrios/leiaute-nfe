@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTotalISSQNtotTest {
@@ -39,7 +40,7 @@ public class NFeInfNFeTotalISSQNtotTest {
         obj.setvISSRet("10");
         obj.setcRegTrib("11");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -47,18 +48,18 @@ public class NFeInfNFeTotalISSQNtotTest {
         Persister persister = new Persister();
         NFeInfNFeTotalISSQNtot obj = persister.read(NFeInfNFeTotalISSQNtot.class, XML);
 
-        Assert.assertEquals("0", obj.getvServ());
-        Assert.assertEquals("1", obj.getvBC());
-        Assert.assertEquals("2", obj.getvISS());
-        Assert.assertEquals("3", obj.getvPIS());
-        Assert.assertEquals("4", obj.getvCOFINS());
-        Assert.assertEquals("5", obj.getdCompet());
-        Assert.assertEquals("6", obj.getvDeducao());
-        Assert.assertEquals("7", obj.getvOutro());
-        Assert.assertEquals("8", obj.getvDescIncond());
-        Assert.assertEquals("9", obj.getvDescCond());
-        Assert.assertEquals("10", obj.getvISSRet());
-        Assert.assertEquals("11", obj.getcRegTrib());
+        assertEquals("0", obj.getvServ());
+        assertEquals("1", obj.getvBC());
+        assertEquals("2", obj.getvISS());
+        assertEquals("3", obj.getvPIS());
+        assertEquals("4", obj.getvCOFINS());
+        assertEquals("5", obj.getdCompet());
+        assertEquals("6", obj.getvDeducao());
+        assertEquals("7", obj.getvOutro());
+        assertEquals("8", obj.getvDescIncond());
+        assertEquals("9", obj.getvDescCond());
+        assertEquals("10", obj.getvISSRet());
+        assertEquals("11", obj.getcRegTrib());
     }
 
 }

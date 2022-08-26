@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeIdeTest {
@@ -50,7 +51,7 @@ public class NFeInfNFeIdeTest {
         obj.setDhCont("21");
         obj.setxJust("22");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -58,29 +59,29 @@ public class NFeInfNFeIdeTest {
         Persister persister = new Persister();
         NFeInfNFeIde obj = persister.read(NFeInfNFeIde.class, XML);
 
-        Assert.assertEquals("0", obj.getcUF());
-        Assert.assertEquals("1", obj.getcNF());
-        Assert.assertEquals("2", obj.getNatOp());
-        Assert.assertEquals("3", obj.getMod());
-        Assert.assertEquals("4", obj.getSerie());
-        Assert.assertEquals("5", obj.getnNF());
-        Assert.assertEquals("6", obj.getDhEmi());
-        Assert.assertEquals("7", obj.getDhSaiEnt());
-        Assert.assertEquals("8", obj.getTpNF());
-        Assert.assertEquals("9", obj.getIdDest());
-        Assert.assertEquals("10", obj.getcMunFG());
-        Assert.assertEquals("11", obj.getTpImp());
-        Assert.assertEquals("12", obj.getTpEmis());
-        Assert.assertEquals("13", obj.getcDV());
-        Assert.assertEquals("14", obj.getTpAmb());
-        Assert.assertEquals("15", obj.getFinNFe());
-        Assert.assertEquals("16", obj.getIndFinal());
-        Assert.assertEquals("17", obj.getIndPres());
-        Assert.assertEquals("18", obj.getIndIntermed());
-        Assert.assertEquals("19", obj.getProcEmi());
-        Assert.assertEquals("20", obj.getVerProc());
-        Assert.assertEquals("21", obj.getDhCont());
-        Assert.assertEquals("22", obj.getxJust());
+        assertEquals("0", obj.getcUF());
+        assertEquals("1", obj.getcNF());
+        assertEquals("2", obj.getNatOp());
+        assertEquals("3", obj.getMod());
+        assertEquals("4", obj.getSerie());
+        assertEquals("5", obj.getnNF());
+        assertEquals("6", obj.getDhEmi());
+        assertEquals("7", obj.getDhSaiEnt());
+        assertEquals("8", obj.getTpNF());
+        assertEquals("9", obj.getIdDest());
+        assertEquals("10", obj.getcMunFG());
+        assertEquals("11", obj.getTpImp());
+        assertEquals("12", obj.getTpEmis());
+        assertEquals("13", obj.getcDV());
+        assertEquals("14", obj.getTpAmb());
+        assertEquals("15", obj.getFinNFe());
+        assertEquals("16", obj.getIndFinal());
+        assertEquals("17", obj.getIndPres());
+        assertEquals("18", obj.getIndIntermed());
+        assertEquals("19", obj.getProcEmi());
+        assertEquals("20", obj.getVerProc());
+        assertEquals("21", obj.getDhCont());
+        assertEquals("22", obj.getxJust());
     }
 
 }

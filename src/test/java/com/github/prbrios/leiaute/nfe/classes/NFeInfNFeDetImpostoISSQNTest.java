@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoISSQNTest {
@@ -43,7 +44,7 @@ public class NFeInfNFeDetImpostoISSQNTest {
         obj.setnProcesso("14");
         obj.setIndIncentivo("15");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -51,21 +52,21 @@ public class NFeInfNFeDetImpostoISSQNTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoISSQN obj = persister.read(NFeInfNFeDetImpostoISSQN.class, XML);
 
-        Assert.assertEquals("0", obj.getvBC());
-        Assert.assertEquals("1", obj.getvAliq());
-        Assert.assertEquals("2", obj.getvISSQN());
-        Assert.assertEquals("3", obj.getcMunFG());
-        Assert.assertEquals("4", obj.getcListServ());
-        Assert.assertEquals("5", obj.getvDeducao());
-        Assert.assertEquals("6", obj.getvOutro());
-        Assert.assertEquals("7", obj.getvDescIncond());
-        Assert.assertEquals("8", obj.getvDescCond());
-        Assert.assertEquals("9", obj.getvISSRet());
-        Assert.assertEquals("10", obj.getIndISS());
-        Assert.assertEquals("11", obj.getcServico());
-        Assert.assertEquals("12", obj.getcMun());
-        Assert.assertEquals("13", obj.getcPais());
-        Assert.assertEquals("14", obj.getnProcesso());
-        Assert.assertEquals("15", obj.getIndIncentivo());
+        assertEquals("0", obj.getvBC());
+        assertEquals("1", obj.getvAliq());
+        assertEquals("2", obj.getvISSQN());
+        assertEquals("3", obj.getcMunFG());
+        assertEquals("4", obj.getcListServ());
+        assertEquals("5", obj.getvDeducao());
+        assertEquals("6", obj.getvOutro());
+        assertEquals("7", obj.getvDescIncond());
+        assertEquals("8", obj.getvDescCond());
+        assertEquals("9", obj.getvISSRet());
+        assertEquals("10", obj.getIndISS());
+        assertEquals("11", obj.getcServico());
+        assertEquals("12", obj.getcMun());
+        assertEquals("13", obj.getcPais());
+        assertEquals("14", obj.getnProcesso());
+        assertEquals("15", obj.getIndIncentivo());
     }
 }

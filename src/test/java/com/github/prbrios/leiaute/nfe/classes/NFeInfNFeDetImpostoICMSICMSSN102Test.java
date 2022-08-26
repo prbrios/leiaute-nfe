@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMSSN102Test {
@@ -29,7 +30,7 @@ public class NFeInfNFeDetImpostoICMSICMSSN102Test {
         obj.setOrig("0");
         obj.setCSOSN("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -37,7 +38,7 @@ public class NFeInfNFeDetImpostoICMSICMSSN102Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMSSN102 obj = persister.read(NFeInfNFeDetImpostoICMSICMSSN102.class, XML);
 
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCSOSN());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCSOSN());
     }
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetObsItemObsContTest {
@@ -29,16 +30,16 @@ public class NFeInfNFeDetObsItemObsContTest {
         obj.setxCampo("0");
         obj.setxTexto("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
     public void test2() throws Exception {
         Persister persister = new Persister();
         NFeInfNFeDetObsItemObsCont obj = persister.read(NFeInfNFeDetObsItemObsCont.class, XML);
-        Assert.assertEquals("0", obj.getxCampo());
-        Assert.assertEquals("1", obj.getxTexto());
+        assertEquals("0", obj.getxCampo());
+        assertEquals("1", obj.getxTexto());
 
-        Assert.assertTrue(true);
+        assertTrue(true);
     }
 }

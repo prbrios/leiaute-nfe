@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeCompraTest {
@@ -30,17 +31,17 @@ public class NFeInfNFeCompraTest {
         obj.setxPed("1");
         obj.setxCont("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
     public void test2() throws Exception {
         Persister persister = new Persister();
         NFeInfNFeCompra obj = persister.read(NFeInfNFeCompra.class, XML);
-        Assert.assertEquals("0", obj.getxNEmp());
-        Assert.assertEquals("1", obj.getxPed());
-        Assert.assertEquals("2", obj.getxCont());
+        assertEquals("0", obj.getxNEmp());
+        assertEquals("1", obj.getxPed());
+        assertEquals("2", obj.getxCont());
 
-        Assert.assertTrue(true);
+        assertTrue(true);
     }
 }

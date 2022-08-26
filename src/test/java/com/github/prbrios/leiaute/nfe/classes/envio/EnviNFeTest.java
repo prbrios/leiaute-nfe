@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class EnviNFeTest {
@@ -30,7 +30,7 @@ public class EnviNFeTest {
         obj.setIdLote("1");
         obj.setIndSinc("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -38,9 +38,9 @@ public class EnviNFeTest {
         Persister persister = new Persister();
         EnviNFe obj = persister.read(EnviNFe.class, XML);
 
-        Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getIdLote());
-        Assert.assertEquals("2", obj.getIndSinc());
+        assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getIdLote());
+        assertEquals("2", obj.getIndSinc());
     }
 
 }

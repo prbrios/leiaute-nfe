@@ -1,7 +1,7 @@
 package com.github.prbrios.leiaute.nfe.classes.evento.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetEnvEventoRetEventoInfEventoTest {
@@ -28,7 +28,7 @@ public class RetEnvEventoRetEventoInfEventoTest {
         obj.setDhRegEvento("14");
         obj.setnProt("15");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -36,21 +36,21 @@ public class RetEnvEventoRetEventoInfEventoTest {
         Persister persister = new Persister();
         RetEnvEventoRetEventoInfEvento obj = persister.read(RetEnvEventoRetEventoInfEvento.class, XML);
 
-        Assert.assertEquals("0", obj.getId());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getVerAplic());
-        Assert.assertEquals("3", obj.getcOrgao());
-        Assert.assertEquals("4", obj.getcStat());
-        Assert.assertEquals("5", obj.getxMotivo());
-        Assert.assertEquals("6", obj.getChNFe());
-        Assert.assertEquals("7", obj.getTpEvento());
-        Assert.assertEquals("8", obj.getxEvento());
-        Assert.assertEquals("9", obj.getnSeqEvento());
-        Assert.assertEquals("10", obj.getcOrgaoAutor());
-        Assert.assertEquals("11", obj.getCNPJDest());
-        Assert.assertEquals("12", obj.getCPFDest());
-        Assert.assertEquals("13", obj.getEmailDest());
-        Assert.assertEquals("14", obj.getDhRegEvento());
-        Assert.assertEquals("15", obj.getnProt());
+        assertEquals("0", obj.getId());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getVerAplic());
+        assertEquals("3", obj.getcOrgao());
+        assertEquals("4", obj.getcStat());
+        assertEquals("5", obj.getxMotivo());
+        assertEquals("6", obj.getChNFe());
+        assertEquals("7", obj.getTpEvento());
+        assertEquals("8", obj.getxEvento());
+        assertEquals("9", obj.getnSeqEvento());
+        assertEquals("10", obj.getcOrgaoAutor());
+        assertEquals("11", obj.getCNPJDest());
+        assertEquals("12", obj.getCPFDest());
+        assertEquals("13", obj.getEmailDest());
+        assertEquals("14", obj.getDhRegEvento());
+        assertEquals("15", obj.getnProt());
     }
 }

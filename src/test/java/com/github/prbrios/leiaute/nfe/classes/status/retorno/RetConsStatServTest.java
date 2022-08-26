@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.status.retorno;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class RetConsStatServTest {
@@ -37,7 +38,7 @@ public class RetConsStatServTest {
         obj.setxObs("8");
         obj.settMed("9");
 
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -45,16 +46,16 @@ public class RetConsStatServTest {
 		Persister persister = new Persister();
 		RetConsStatServ obj = persister.read(RetConsStatServ.class, XML);
 
-		Assert.assertEquals("0", obj.getVersao());
-        Assert.assertEquals("1", obj.getTpAmb());
-        Assert.assertEquals("2", obj.getVerAplic());
-        Assert.assertEquals("3", obj.getcStat());
-        Assert.assertEquals("4", obj.getxMotivo());
-        Assert.assertEquals("5", obj.getcUF());
-        Assert.assertEquals("6", obj.getDhRecbto());
-        Assert.assertEquals("7", obj.getDhRetorno());
-        Assert.assertEquals("8", obj.getxObs());
-        Assert.assertEquals("9", obj.gettMed());
+		assertEquals("0", obj.getVersao());
+        assertEquals("1", obj.getTpAmb());
+        assertEquals("2", obj.getVerAplic());
+        assertEquals("3", obj.getcStat());
+        assertEquals("4", obj.getxMotivo());
+        assertEquals("5", obj.getcUF());
+        assertEquals("6", obj.getDhRecbto());
+        assertEquals("7", obj.getDhRetorno());
+        assertEquals("8", obj.getxObs());
+        assertEquals("9", obj.gettMed());
 	}
 
 }

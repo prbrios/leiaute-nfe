@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.evento.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class EnvEventoEventoInfEventoDetEventoAutXMLTest {
@@ -29,7 +29,7 @@ public class EnvEventoEventoInfEventoDetEventoAutXMLTest {
         obj.setCNPJ("0");
         obj.setCPF("1");
         
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class EnvEventoEventoInfEventoDetEventoAutXMLTest {
 		Persister persister = new Persister();
 		EnvEventoEventoInfEventoDetEventoAutXML obj = persister.read(EnvEventoEventoInfEventoDetEventoAutXML.class, XML);
 
-		Assert.assertEquals("0", obj.getCNPJ());
-        Assert.assertEquals("1", obj.getCPF());
+		assertEquals("0", obj.getCNPJ());
+        assertEquals("1", obj.getCPF());
 	}
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTranspTest {
@@ -30,7 +31,7 @@ public class NFeInfNFeTranspTest {
         obj.setVagao("1");
         obj.setBalsa("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -38,9 +39,9 @@ public class NFeInfNFeTranspTest {
         Persister persister = new Persister();
         NFeInfNFeTransp obj = persister.read(NFeInfNFeTransp.class, XML);
 
-        Assert.assertEquals("0", obj.getModFrete());
-        Assert.assertEquals("1", obj.getVagao());
-        Assert.assertEquals("2", obj.getBalsa());
+        assertEquals("0", obj.getModFrete());
+        assertEquals("1", obj.getVagao());
+        assertEquals("2", obj.getBalsa());
     }
 
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeTranspTransportaTest {
@@ -34,7 +35,7 @@ public class NFeInfNFeTranspTransportaTest {
         obj.setxMun("5");
         obj.setUF("6");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -42,13 +43,13 @@ public class NFeInfNFeTranspTransportaTest {
         Persister persister = new Persister();
         NFeInfNFeTranspTransporta obj = persister.read(NFeInfNFeTranspTransporta.class, XML);
 
-        Assert.assertEquals("0", obj.getCNPJ());
-        Assert.assertEquals("1", obj.getCPF());
-        Assert.assertEquals("2", obj.getxNome());
-        Assert.assertEquals("3", obj.getIE());
-        Assert.assertEquals("4", obj.getxEnder());
-        Assert.assertEquals("5", obj.getxMun());
-        Assert.assertEquals("6", obj.getUF());
+        assertEquals("0", obj.getCNPJ());
+        assertEquals("1", obj.getCPF());
+        assertEquals("2", obj.getxNome());
+        assertEquals("3", obj.getIE());
+        assertEquals("4", obj.getxEnder());
+        assertEquals("5", obj.getxMun());
+        assertEquals("6", obj.getUF());
     }
 
 }

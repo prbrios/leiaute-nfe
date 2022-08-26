@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 import java.util.ArrayList;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeCanaTest {
@@ -36,7 +37,7 @@ public class NFeInfNFeCanaTest {
         obj.setvTotDed("6");
         obj.setvLiqFor("7");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -44,15 +45,15 @@ public class NFeInfNFeCanaTest {
         Persister persister = new Persister();
         NFeInfNFeCana obj = persister.read(NFeInfNFeCana.class, XML);
 
-        Assert.assertEquals("0", obj.getSafra());
-        Assert.assertEquals("1", obj.getRef());
-        Assert.assertEquals(0, obj.getForDia().size());
-        Assert.assertEquals("2", obj.getqTotMes());
-        Assert.assertEquals("3", obj.getqTotAnt());
-        Assert.assertEquals("4", obj.getqTotGer());
-        Assert.assertEquals(0, obj.getDeduc().size());
-        Assert.assertEquals("5", obj.getvFor());
-        Assert.assertEquals("6", obj.getvTotDed());
-        Assert.assertEquals("7", obj.getvLiqFor());
+        assertEquals("0", obj.getSafra());
+        assertEquals("1", obj.getRef());
+        assertEquals(0, obj.getForDia().size());
+        assertEquals("2", obj.getqTotMes());
+        assertEquals("3", obj.getqTotAnt());
+        assertEquals("4", obj.getqTotGer());
+        assertEquals(0, obj.getDeduc().size());
+        assertEquals("5", obj.getvFor());
+        assertEquals("6", obj.getvTotDed());
+        assertEquals("7", obj.getvLiqFor());
     }
 }

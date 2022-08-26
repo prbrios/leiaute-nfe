@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdCombTest {
@@ -37,7 +38,7 @@ public class NFeInfNFeDetProdCombTest {
         obj.setqTemp("7");
         obj.setUFCons("8");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -45,15 +46,15 @@ public class NFeInfNFeDetProdCombTest {
         Persister persister = new Persister();
         NFeInfNFeDetProdComb obj = persister.read(NFeInfNFeDetProdComb.class, XML);
 
-        Assert.assertEquals("0", obj.getcProdANP());
-        Assert.assertEquals("1", obj.getDescANP());
-        Assert.assertEquals("2", obj.getpGLP());
-        Assert.assertEquals("3", obj.getpGNn());
-        Assert.assertEquals("4", obj.getpGNi());
-        Assert.assertEquals("5", obj.getvPart());
-        Assert.assertEquals("6", obj.getCODIF());
-        Assert.assertEquals("7", obj.getqTemp());
-        Assert.assertEquals("8", obj.getUFCons());
+        assertEquals("0", obj.getcProdANP());
+        assertEquals("1", obj.getDescANP());
+        assertEquals("2", obj.getpGLP());
+        assertEquals("3", obj.getpGNn());
+        assertEquals("4", obj.getpGNi());
+        assertEquals("5", obj.getvPart());
+        assertEquals("6", obj.getCODIF());
+        assertEquals("7", obj.getqTemp());
+        assertEquals("8", obj.getUFCons());
 
     }
 }

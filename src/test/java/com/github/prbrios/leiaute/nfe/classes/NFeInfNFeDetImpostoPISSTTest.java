@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 
@@ -34,7 +35,7 @@ public class NFeInfNFeDetImpostoPISSTTest {
         obj.setvPIS("4");
         obj.setIndSomaPISST("5");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -43,12 +44,12 @@ public class NFeInfNFeDetImpostoPISSTTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoPISST obj = persister.read(NFeInfNFeDetImpostoPISST.class, XML);
         
-        Assert.assertEquals("0", obj.getvBC());
-        Assert.assertEquals("1", obj.getpPIS());
-        Assert.assertEquals("2", obj.getqBCProd());
-        Assert.assertEquals("3", obj.getvAliqProd());
-        Assert.assertEquals("4", obj.getvPIS());
-        Assert.assertEquals("5", obj.getIndSomaPISST());
+        assertEquals("0", obj.getvBC());
+        assertEquals("1", obj.getpPIS());
+        assertEquals("2", obj.getqBCProd());
+        assertEquals("3", obj.getvAliqProd());
+        assertEquals("4", obj.getvPIS());
+        assertEquals("5", obj.getIndSomaPISST());
         
     }
 

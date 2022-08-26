@@ -17,8 +17,9 @@ package com.github.prbrios.leiaute.nfe.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdArmaTest {
@@ -34,7 +35,7 @@ public class NFeInfNFeDetProdArmaTest {
         obj.setnCano("2");
         obj.setDescr("3");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -42,9 +43,9 @@ public class NFeInfNFeDetProdArmaTest {
         Persister persister = new Persister();
         NFeInfNFeDetProdArma obj = persister.read(NFeInfNFeDetProdArma.class, XML);
 
-        Assert.assertEquals("0", obj.getTpArma());
-        Assert.assertEquals("1", obj.getnSerie());
-        Assert.assertEquals("2", obj.getnCano());
-        Assert.assertEquals("3", obj.getDescr());
+        assertEquals("0", obj.getTpArma());
+        assertEquals("1", obj.getnSerie());
+        assertEquals("2", obj.getnCano());
+        assertEquals("3", obj.getDescr());
     }
 }

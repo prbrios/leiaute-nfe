@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMS20Test {
@@ -40,7 +41,7 @@ public class NFeInfNFeDetImpostoICMSICMS20Test {
         obj.setpRedBC("3");
         obj.setvICMSDeson("10");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -49,17 +50,17 @@ public class NFeInfNFeDetImpostoICMSICMS20Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMS20 obj = persister.read(NFeInfNFeDetImpostoICMSICMS20.class, XML);
         
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCST());
-        Assert.assertEquals("2", obj.getModBC());
-        Assert.assertEquals("3", obj.getpRedBC());
-        Assert.assertEquals("4", obj.getvBC());
-        Assert.assertEquals("5", obj.getpICMS());
-        Assert.assertEquals("6", obj.getvICMS());
-        Assert.assertEquals("7", obj.getvBCFCP());
-        Assert.assertEquals("8", obj.getpFCP());
-        Assert.assertEquals("9", obj.getvFCP());
-        Assert.assertEquals("10", obj.getvICMSDeson());
-        Assert.assertEquals("11", obj.getMotDesICMS());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCST());
+        assertEquals("2", obj.getModBC());
+        assertEquals("3", obj.getpRedBC());
+        assertEquals("4", obj.getvBC());
+        assertEquals("5", obj.getpICMS());
+        assertEquals("6", obj.getvICMS());
+        assertEquals("7", obj.getvBCFCP());
+        assertEquals("8", obj.getpFCP());
+        assertEquals("9", obj.getvFCP());
+        assertEquals("10", obj.getvICMSDeson());
+        assertEquals("11", obj.getMotDesICMS());
     }
 }

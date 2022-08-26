@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeIdeNFrefTest {
@@ -29,7 +30,7 @@ public class NFeInfNFeIdeNFrefTest {
         obj.setRefNFe("0");
         obj.setRefCTe("1");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -37,8 +38,8 @@ public class NFeInfNFeIdeNFrefTest {
         Persister persister = new Persister();
         NFeInfNFeIdeNFref obj = persister.read(NFeInfNFeIdeNFref.class, XML);
 
-        Assert.assertEquals("0", obj.getRefNFe());
-        Assert.assertEquals("1", obj.getRefCTe());
+        assertEquals("0", obj.getRefNFe());
+        assertEquals("1", obj.getRefCTe());
     }
 
 }

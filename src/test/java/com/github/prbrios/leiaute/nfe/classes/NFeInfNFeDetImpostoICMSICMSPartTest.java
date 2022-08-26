@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMSPartTest {
@@ -45,7 +46,7 @@ public class NFeInfNFeDetImpostoICMSICMSPartTest {
         obj.setpBCOp("16");
         obj.setUFST("17");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -53,24 +54,24 @@ public class NFeInfNFeDetImpostoICMSICMSPartTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMSPart obj = persister.read(NFeInfNFeDetImpostoICMSICMSPart.class, XML);
 
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCST());
-        Assert.assertEquals("2", obj.getModBC());
-        Assert.assertEquals("3", obj.getvBC());
-        Assert.assertEquals("4", obj.getpRedBC());
-        Assert.assertEquals("5", obj.getpICMS());
-        Assert.assertEquals("6", obj.getvICMS());
-        Assert.assertEquals("7", obj.getModBCST());
-        Assert.assertEquals("8", obj.getpMVAST());
-        Assert.assertEquals("9", obj.getpRedBCST());
-        Assert.assertEquals("10", obj.getvBCST());
-        Assert.assertEquals("11", obj.getpICMSST());
-        Assert.assertEquals("12", obj.getvICMSST());
-        Assert.assertEquals("13", obj.getvBCFCPST());
-        Assert.assertEquals("14", obj.getpFCPST());
-        Assert.assertEquals("15", obj.getvFCPST());
-        Assert.assertEquals("16", obj.getpBCOp());
-        Assert.assertEquals("17", obj.getUFST());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCST());
+        assertEquals("2", obj.getModBC());
+        assertEquals("3", obj.getvBC());
+        assertEquals("4", obj.getpRedBC());
+        assertEquals("5", obj.getpICMS());
+        assertEquals("6", obj.getvICMS());
+        assertEquals("7", obj.getModBCST());
+        assertEquals("8", obj.getpMVAST());
+        assertEquals("9", obj.getpRedBCST());
+        assertEquals("10", obj.getvBCST());
+        assertEquals("11", obj.getpICMSST());
+        assertEquals("12", obj.getvICMSST());
+        assertEquals("13", obj.getvBCFCPST());
+        assertEquals("14", obj.getpFCPST());
+        assertEquals("15", obj.getvFCPST());
+        assertEquals("16", obj.getpBCOp());
+        assertEquals("17", obj.getUFST());
 
     }
 }

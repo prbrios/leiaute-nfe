@@ -15,8 +15,8 @@
  */
 package com.github.prbrios.leiaute.nfe.classes.evento.envio;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class EnvEventoEventoInfEventoTest {
@@ -37,7 +37,7 @@ public class EnvEventoEventoInfEventoTest {
         obj.setnSeqEvento("8");
         obj.setVerEvento("9");
 
-		Assert.assertEquals(XML, obj.toString());
+		assertEquals(XML, obj.toString());
 	}
 
 	@Test
@@ -45,15 +45,15 @@ public class EnvEventoEventoInfEventoTest {
 		Persister persister = new Persister();
 		EnvEventoEventoInfEvento obj = persister.read(EnvEventoEventoInfEvento.class, XML);
 
-		Assert.assertEquals("1", obj.getcOrgao());
-        Assert.assertEquals("2", obj.getTpAmb());
-        Assert.assertEquals("3", obj.getCNPJ());
-        Assert.assertEquals("4", obj.getCPF());
-        Assert.assertEquals("5", obj.getChNFe());
-        Assert.assertEquals("6", obj.getDhEvento());
-        Assert.assertEquals("7", obj.getTpEvento());
-        Assert.assertEquals("8", obj.getnSeqEvento());
-        Assert.assertEquals("9", obj.getVerEvento());
+		assertEquals("1", obj.getcOrgao());
+        assertEquals("2", obj.getTpAmb());
+        assertEquals("3", obj.getCNPJ());
+        assertEquals("4", obj.getCPF());
+        assertEquals("5", obj.getChNFe());
+        assertEquals("6", obj.getDhEvento());
+        assertEquals("7", obj.getTpEvento());
+        assertEquals("8", obj.getnSeqEvento());
+        assertEquals("9", obj.getVerEvento());
 	}
     
     

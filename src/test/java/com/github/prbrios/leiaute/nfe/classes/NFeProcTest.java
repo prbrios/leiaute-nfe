@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.core.Persister;
 
@@ -30,7 +31,7 @@ public class NFeProcTest {
         NFeProc obj = new NFeProc();
         obj.setVersao("4.00");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -38,7 +39,7 @@ public class NFeProcTest {
         Persister persister = new Persister();
         NFeProc obj = persister.read(NFeProc.class, XML);
         
-        Assert.assertEquals("4.00", obj.getVersao());
+        assertEquals("4.00", obj.getVersao());
     }
 
 }

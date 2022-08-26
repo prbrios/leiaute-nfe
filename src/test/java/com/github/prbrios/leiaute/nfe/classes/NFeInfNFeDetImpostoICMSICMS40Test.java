@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMS40Test {
@@ -32,7 +33,7 @@ public class NFeInfNFeDetImpostoICMSICMS40Test {
         obj.setvICMSDeson("2");
         obj.setMotDesICMS("3");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -40,10 +41,10 @@ public class NFeInfNFeDetImpostoICMSICMS40Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMS40 obj = persister.read(NFeInfNFeDetImpostoICMSICMS40.class, XML);
         
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCST());
-        Assert.assertEquals("2", obj.getvICMSDeson());
-        Assert.assertEquals("3", obj.getMotDesICMS());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCST());
+        assertEquals("2", obj.getvICMSDeson());
+        assertEquals("3", obj.getMotDesICMS());
         
     }
 }

@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoICMSICMSSN500Test {
@@ -40,7 +41,7 @@ public class NFeInfNFeDetImpostoICMSICMSSN500Test {
         obj.setpICMSEfet("11");
         obj.setvICMSEfet("12");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -48,19 +49,19 @@ public class NFeInfNFeDetImpostoICMSICMSSN500Test {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoICMSICMSSN500 obj = persister.read(NFeInfNFeDetImpostoICMSICMSSN500.class, XML);
 
-        Assert.assertEquals("0", obj.getOrig());
-        Assert.assertEquals("1", obj.getCSOSN());
-        Assert.assertEquals("2", obj.getvBCSTRet());
-        Assert.assertEquals("3", obj.getpST());
-        Assert.assertEquals("4", obj.getvICMSSubstituto());
-        Assert.assertEquals("5", obj.getvICMSSTRet());
-        Assert.assertEquals("6", obj.getvBCFCPSTRet());
-        Assert.assertEquals("7", obj.getpFCPSTRet());
-        Assert.assertEquals("8", obj.getvFCPSTRet());
-        Assert.assertEquals("9", obj.getpRedBCEfet());
-        Assert.assertEquals("10", obj.getvBCEfet());
-        Assert.assertEquals("11", obj.getpICMSEfet());
-        Assert.assertEquals("12", obj.getvICMSEfet());
+        assertEquals("0", obj.getOrig());
+        assertEquals("1", obj.getCSOSN());
+        assertEquals("2", obj.getvBCSTRet());
+        assertEquals("3", obj.getpST());
+        assertEquals("4", obj.getvICMSSubstituto());
+        assertEquals("5", obj.getvICMSSTRet());
+        assertEquals("6", obj.getvBCFCPSTRet());
+        assertEquals("7", obj.getpFCPSTRet());
+        assertEquals("8", obj.getvFCPSTRet());
+        assertEquals("9", obj.getpRedBCEfet());
+        assertEquals("10", obj.getvBCEfet());
+        assertEquals("11", obj.getpICMSEfet());
+        assertEquals("12", obj.getvICMSEfet());
 
     }
 }

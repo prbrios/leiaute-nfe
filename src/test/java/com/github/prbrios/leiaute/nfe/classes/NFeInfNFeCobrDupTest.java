@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeCobrDupTest {
@@ -30,7 +31,7 @@ public class NFeInfNFeCobrDupTest {
         obj.setdVenc("1");
         obj.setvDup("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -38,9 +39,9 @@ public class NFeInfNFeCobrDupTest {
         Persister persister = new Persister();
         NFeInfNFeCobrDup obj = persister.read(NFeInfNFeCobrDup.class, XML);
 
-        Assert.assertEquals("0", obj.getnDup());
-        Assert.assertEquals("1", obj.getdVenc());
-        Assert.assertEquals("2", obj.getvDup());
+        assertEquals("0", obj.getnDup());
+        assertEquals("1", obj.getdVenc());
+        assertEquals("2", obj.getvDup());
 
     }
 }

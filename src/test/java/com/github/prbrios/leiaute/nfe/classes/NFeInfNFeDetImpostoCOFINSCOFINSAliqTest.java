@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoCOFINSCOFINSAliqTest {
@@ -32,7 +33,7 @@ public class NFeInfNFeDetImpostoCOFINSCOFINSAliqTest {
         obj.setvBC("100.00");
         obj.setvCOFINS("3.00");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -40,9 +41,9 @@ public class NFeInfNFeDetImpostoCOFINSCOFINSAliqTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoCOFINSCOFINSAliq obj = persister.read(NFeInfNFeDetImpostoCOFINSCOFINSAliq.class, XML);
         
-        Assert.assertEquals("01", obj.getCST());
-        Assert.assertEquals("3.00", obj.getpCOFINS());
-        Assert.assertEquals("100.00", obj.getvBC());
-        Assert.assertEquals("3.00", obj.getvCOFINS());
+        assertEquals("01", obj.getCST());
+        assertEquals("3.00", obj.getpCOFINS());
+        assertEquals("100.00", obj.getvBC());
+        assertEquals("3.00", obj.getvCOFINS());
     }
 }

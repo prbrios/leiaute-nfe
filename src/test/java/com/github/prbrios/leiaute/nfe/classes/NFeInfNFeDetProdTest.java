@@ -17,8 +17,9 @@ package com.github.prbrios.leiaute.nfe.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetProdTest {
@@ -65,7 +66,7 @@ public class NFeInfNFeDetProdTest {
         obj.setnFCI("27");
         obj.setnRECOPI("28");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -73,35 +74,35 @@ public class NFeInfNFeDetProdTest {
         Persister persister = new Persister();
         NFeInfNFeDetProd obj = persister.read(NFeInfNFeDetProd.class, XML);
 
-        Assert.assertEquals("0", obj.getcProd());
-        Assert.assertEquals("1", obj.getcEAN());
-        Assert.assertEquals("2", obj.getcBarra());
-        Assert.assertEquals("3", obj.getxProd());
-        Assert.assertEquals("4", obj.getNCM());
-        Assert.assertEquals(3, obj.getNVE().size());
-        Assert.assertEquals("5", obj.getCEST());
-        Assert.assertEquals("6", obj.getIndEscala());
-        Assert.assertEquals("7", obj.getCNPJFab());
-        Assert.assertEquals("8", obj.getcBenef());
-        Assert.assertEquals("9", obj.getEXTIPI());
-        Assert.assertEquals("10", obj.getCFOP());
-        Assert.assertEquals("11", obj.getuCom());
-        Assert.assertEquals("12", obj.getqCom());
-        Assert.assertEquals("13", obj.getvUnCom());
-        Assert.assertEquals("14", obj.getvProd());
-        Assert.assertEquals("15", obj.getcEANTrib());
-        Assert.assertEquals("16", obj.getcBarraTrib());
-        Assert.assertEquals("17", obj.getuTrib());
-        Assert.assertEquals("18", obj.getqTrib());
-        Assert.assertEquals("19", obj.getvUnTrib());
-        Assert.assertEquals("20", obj.getvFrete());
-        Assert.assertEquals("21", obj.getvSeg());
-        Assert.assertEquals("22", obj.getvDesc());
-        Assert.assertEquals("23", obj.getvOutro());
-        Assert.assertEquals("24", obj.getIndTot());
-        Assert.assertEquals("25", obj.getxPed());
-        Assert.assertEquals("26", obj.getnItemPed());
-        Assert.assertEquals("27", obj.getnFCI());
-        Assert.assertEquals("28", obj.getnRECOPI());
+        assertEquals("0", obj.getcProd());
+        assertEquals("1", obj.getcEAN());
+        assertEquals("2", obj.getcBarra());
+        assertEquals("3", obj.getxProd());
+        assertEquals("4", obj.getNCM());
+        assertEquals(3, obj.getNVE().size());
+        assertEquals("5", obj.getCEST());
+        assertEquals("6", obj.getIndEscala());
+        assertEquals("7", obj.getCNPJFab());
+        assertEquals("8", obj.getcBenef());
+        assertEquals("9", obj.getEXTIPI());
+        assertEquals("10", obj.getCFOP());
+        assertEquals("11", obj.getuCom());
+        assertEquals("12", obj.getqCom());
+        assertEquals("13", obj.getvUnCom());
+        assertEquals("14", obj.getvProd());
+        assertEquals("15", obj.getcEANTrib());
+        assertEquals("16", obj.getcBarraTrib());
+        assertEquals("17", obj.getuTrib());
+        assertEquals("18", obj.getqTrib());
+        assertEquals("19", obj.getvUnTrib());
+        assertEquals("20", obj.getvFrete());
+        assertEquals("21", obj.getvSeg());
+        assertEquals("22", obj.getvDesc());
+        assertEquals("23", obj.getvOutro());
+        assertEquals("24", obj.getIndTot());
+        assertEquals("25", obj.getxPed());
+        assertEquals("26", obj.getnItemPed());
+        assertEquals("27", obj.getnFCI());
+        assertEquals("28", obj.getnRECOPI());
     }
 }

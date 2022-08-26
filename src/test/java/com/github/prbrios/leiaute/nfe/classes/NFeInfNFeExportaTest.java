@@ -15,8 +15,9 @@
  */
 package com.github.prbrios.leiaute.nfe.classes;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeExportaTest {
@@ -30,7 +31,7 @@ public class NFeInfNFeExportaTest {
         obj.setxLocExporta("1");
         obj.setxLocDespacho("2");
 
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
 
     @Test
@@ -38,9 +39,9 @@ public class NFeInfNFeExportaTest {
         Persister persister = new Persister();
         NFeInfNFeExporta obj = persister.read(NFeInfNFeExporta.class, XML);
 
-        Assert.assertEquals("0", obj.getUFSaidaPais());
-        Assert.assertEquals("1", obj.getxLocExporta());
-        Assert.assertEquals("2", obj.getxLocDespacho());
+        assertEquals("0", obj.getUFSaidaPais());
+        assertEquals("1", obj.getxLocExporta());
+        assertEquals("2", obj.getxLocDespacho());
     }
 
 }

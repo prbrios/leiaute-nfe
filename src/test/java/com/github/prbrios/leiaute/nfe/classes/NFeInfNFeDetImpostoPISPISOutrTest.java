@@ -16,8 +16,9 @@
 package com.github.prbrios.leiaute.nfe.classes;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.core.Persister;
 
 public class NFeInfNFeDetImpostoPISPISOutrTest {
@@ -34,7 +35,7 @@ public class NFeInfNFeDetImpostoPISPISOutrTest {
         obj.setvBC("100.00");
         obj.setvPIS("3.00");
         
-        Assert.assertEquals(XML, obj.toString());
+        assertEquals(XML, obj.toString());
     }
     
     @Test
@@ -42,11 +43,11 @@ public class NFeInfNFeDetImpostoPISPISOutrTest {
         Persister persister = new Persister();
         NFeInfNFeDetImpostoPISPISOutr obj = persister.read(NFeInfNFeDetImpostoPISPISOutr.class, XML);
         
-        Assert.assertEquals("01", obj.getCST());
-        Assert.assertEquals("3.00", obj.getpPIS());
-        Assert.assertEquals("1", obj.getqBCProd());
-        Assert.assertEquals("7.00", obj.getvAliqProd());
-        Assert.assertEquals("100.00", obj.getvBC());
-        Assert.assertEquals("3.00", obj.getvPIS());
+        assertEquals("01", obj.getCST());
+        assertEquals("3.00", obj.getpPIS());
+        assertEquals("1", obj.getqBCProd());
+        assertEquals("7.00", obj.getvAliqProd());
+        assertEquals("100.00", obj.getvBC());
+        assertEquals("3.00", obj.getvPIS());
     }
 }
